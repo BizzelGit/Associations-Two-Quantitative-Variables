@@ -9,5 +9,5 @@ print(housing.head())
 #create your scatter plot here:
 plt.scatter(x = housing.beds, y = housing.sqfeet)
 plt.xlabel('Beds')
-plt.ylabel('Rental Price (USD)')
+plt.ylabel('Sqfeet')
 plt.show()
