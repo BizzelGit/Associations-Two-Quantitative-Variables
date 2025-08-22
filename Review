@@ -1,0 +1,24 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt 
+import seaborn as sns
+import codecademylib3
+from scipy.stats import pearsonr
+np.set_printoptions(suppress=True, precision = 1) 
+
+penguins = pd.read_csv('penguins.csv')
+
+print(penguins.head(10))
+
+plt.scatter(x = penguins.flipper_length_mm, y = penguins.body_mass_g)
+plt.xlabel('length')
+plt.ylabel('bodymass')
+plt.show()
+
+cov_flipper = np.cov(penguins.flipper_length_mm, penguins.body_mass_g)
+
+print(cov_flipper)
+
+corr_flipper, p = pearsonr(penguins.flipper_length_mm, penguins.body_mass_g)
+
+print(corr_flipper) 
